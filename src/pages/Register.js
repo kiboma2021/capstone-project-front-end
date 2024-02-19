@@ -1,8 +1,3 @@
-
-export const Register = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+export const Register = () => (
+  <div />
+);

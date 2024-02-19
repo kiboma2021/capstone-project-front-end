@@ -1,8 +1,3 @@
-
-export const Reserved = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+export const Reserved = () => (
+  <div />
+);

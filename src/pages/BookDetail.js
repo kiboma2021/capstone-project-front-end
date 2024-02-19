@@ -1,8 +1,3 @@
-
-export const BookDetail = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+export const BookDetail = () => (
+  <div />
+);

@@ -1,9 +1,3 @@
-
-export const PageNotFound = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
+export const PageNotFound = () => (
+  <div />
+);

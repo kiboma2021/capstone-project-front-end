@@ -1,5 +1,5 @@
 import { Route,Routes } from "react-router-dom"
-import { Home,Login,Register,Reserved,BookDetail } from "../pages"
+import { Home,Login,Register,Reserved,BookDetail,PageNotFound } from "../pages"
 
 
 export const AllRoutes = () => {

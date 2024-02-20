@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+/* eslint-disable import/no-cycle */
 
 export { BookCard } from './BookCard';
-// eslint-disable-next-line import/no-cycle
 export { NavPanel } from './NavPanel';

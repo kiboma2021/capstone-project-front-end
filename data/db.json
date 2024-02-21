@@ -1,0 +1,270 @@
+{
+  "books": [
+    {
+      "id": "001",
+      "title": "Python Crash Course",
+      "description": "A hands-on, project-based introduction to programming.",
+      "summary": "Python Crash Course offers a comprehensive introduction to Python programming. With its hands-on approach and project-based learning, it's perfect for beginners looking to dive into programming.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/clean_code.jpg",
+      "price": 29.99,
+      "rating": 4.5,
+      "best_seller": true,
+      "in_stock": true,
+      "size": 10
+    },
+    {
+      "id": "002",
+      "title": "JavaScript: The Good Parts",
+      "description": "A guide to the parts of JavaScript that are worth using.",
+      "summary": "JavaScript: The Good Parts focuses on explaining the best parts of JavaScript for effective programming. It's a must-read for developers aiming to write cleaner and more maintainable code.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/javascript_good_parts.jpg",
+      "price": 24.99,
+      "rating": 1,
+      "best_seller": false,
+      "in_stock": false,
+      "size": 8
+    },
+    {
+      "id": "003",
+      "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+      "description": "A guide to writing clean, maintainable code.",
+      "summary": "Clean Code provides valuable insights into writing clean and maintainable code following Agile principles. It's an essential resource for developers striving for excellence in software craftsmanship.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/clean_code.jpg",
+      "price": 39.99,
+      "rating": 5,
+      "best_seller": true,
+      "in_stock": true,
+      "size": 12
+    },
+    {
+      "id": "004",
+      "title": "Head First Design Patterns",
+      "description": "A brain-friendly guide to design patterns in software development.",
+      "summary": "Head First Design Patterns offers an engaging approach to understanding design patterns. With its brain-friendly style, it helps developers grasp complex concepts easily and apply them in real-world scenarios.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/head_first_design_patterns.jpg",
+      "price": 34.99,
+      "rating": 4.6,
+      "best_seller": true,
+      "in_stock": true,
+      "size": 15
+    },
+    {
+      "id": "005",
+      "title": "Eloquent JavaScript: A Modern Introduction to Programming",
+      "description": "A comprehensive introduction to JavaScript.",
+      "summary": "Eloquent JavaScript provides a modern and comprehensive introduction to the JavaScript language. It's suitable for beginners and experienced programmers alike, covering both basic and advanced concepts.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/eloquent_javascript.jpg",
+      "price": 32.99,
+      "rating": 1.5,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 11
+    },
+    {
+      "id": "006",
+      "title": "Cracking the Coding Interview",
+      "description": "A comprehensive guide to preparing for coding interviews.",
+      "summary": "Cracking the Coding Interview is an indispensable resource for anyone preparing for technical interviews. With its comprehensive coverage of data structures, algorithms, and problem-solving strategies, it helps candidates ace their interviews.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/cracking_the_coding_interview.jpg",
+      "price": 44.99,
+      "rating": 4.8,
+      "best_seller": true,
+      "in_stock": true,
+      "size": 18
+    },
+    {
+      "id": "007",
+      "title": "Learning Python",
+      "description": "An introductory Python book for beginners.",
+      "summary": "Learning Python is a beginner-friendly guide to learning the Python programming language. With its clear explanations and practical examples, it's perfect for those new to programming.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/learning_python.jpg",
+      "price": 27.99,
+      "rating": 1,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 9
+    },
+    {
+      "id": "008",
+      "title": "Designing Data-Intensive Applications",
+      "description": "A comprehensive guide to designing robust, scalable data systems.",
+      "summary": "Designing Data-Intensive Applications offers a comprehensive overview of designing robust and scalable data systems. It covers a wide range of topics, including data modeling, storage systems, and distributed systems.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/designing_data_intensive_applications.jpg",
+      "price": 49.99,
+      "rating": 4.9,
+      "best_seller": true,
+      "in_stock": true,
+      "size": 20
+    },
+    {
+      "id": "009",
+      "title": "Java Concurrency in Practice",
+      "description": "A guide to writing concurrent and scalable Java applications.",
+      "summary": "Java Concurrency in Practice provides practical guidance on writing concurrent and scalable Java applications. It covers a wide range of topics, including thread management, synchronization, and performance tuning.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/java_concurrency_in_practice.jpg",
+      "price": 38.99,
+      "rating": 2.2,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 14
+    },
+    {
+      "id": "010",
+      "title": "The Pragmatic Programmer: Your Journey to Mastery",
+      "description": "A guide to becoming a better programmer.",
+      "summary": "The Pragmatic Programmer is a must-read for any programmer looking to improve their skills. It offers practical advice and timeless principles for writing better code and becoming a more effective developer.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/pragmatic_programmer.jpg",
+      "price": 42.99,
+      "rating": 2,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 17
+    },
+    {
+      "id": "011",
+      "title": "Algorithms Illuminated: Part 1",
+      "description": "A comprehensive introduction to algorithms.",
+      "summary": "Algorithms Illuminated: Part 1 provides a comprehensive introduction to algorithms. With its clear explanations and illustrative examples, it's perfect for students and professionals alike.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/algorithms_illuminated.jpg",
+      "price": 36.99,
+      "rating": 2.6,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 13
+    },
+    {
+      "id": "012",
+      "title": "Effective Java",
+      "description": "A guide to writing effective and efficient Java code.",
+      "summary": "Effective Java offers practical advice on writing effective and efficient Java code. It covers best practices, design patterns, and common pitfalls to avoid, making it essential for Java developers.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/effective_java.jpg",
+      "price": 31.99,
+      "rating": 1.5,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 11
+    },
+    {
+      "id": "013",
+      "title": "Learning SQL",
+      "description": "An introductory SQL book for beginners.",
+      "summary": "Learning SQL is a comprehensive guide to learning the SQL language. With its clear explanations and practical examples, it's perfect for beginners looking to master SQL.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/learning_sql.webp",
+      "price": 29.99,
+      "rating": 1,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 10
+    },
+    {
+      "id": "014",
+      "title": "Deep Learning",
+      "description": "A comprehensive guide to deep learning techniques.",
+      "summary": "Deep Learning provides a comprehensive overview of deep learning techniques. With its clear explanations and practical examples, it's perfect for students and practitioners alike.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/deep_learning.jpg",
+      "price": 45.99,
+      "rating": 5,
+      "best_seller": true,
+      "in_stock": true,
+      "size": 19
+    },
+    {
+      "id": "015",
+      "title": "Learning React: A Hands-On Guide to Building Web Applications Using React and Redux",
+      "description": "An introductory guide to building web applications with React and Redux.",
+      "summary": "Learning React offers a hands-on guide to building web applications with React and Redux. With its practical examples and clear explanations, it's perfect for beginners and intermediate developers.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/learning_react.webp",
+      "price": 37.99,
+      "rating": 2,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 14
+    },
+    {
+      "id": "016",
+      "title": "Coders at Work: Reflections on the Craft of Programming",
+      "description": "A collection of interviews with notable programmers.",
+      "summary": "Coders at Work offers a fascinating look into the lives and work of notable programmers. Through a series of in-depth interviews, it provides valuable insights and inspiration for aspiring developers.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/coders_at_work.webp",
+      "price": 33.99,
+      "rating": 1,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 12
+    },
+    {
+      "id": "017",
+      "title": "Learning C++ Programming",
+      "description": "An introductory C++ book for beginners.",
+      "summary": "Learning C++ Programming is a comprehensive guide to learning the C++ programming language. With its clear explanations and practical examples, it's perfect for beginners looking to master C++.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/learning_cpp.webp",
+      "price": 28.99,
+      "rating": 3,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 9
+    },
+    {
+      "id": "018",
+      "title": "The Complete Software Developer's Career Guide",
+      "description": "A comprehensive guide to building a successful career in software development.",
+      "summary": "The Complete Software Developer's Career Guide offers practical advice and strategies for building a successful career in software development. It covers a wide range of topics, including programming skills, career advancement, and job searching.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/software_developers_career_guide.webp",
+      "price": 41.99,
+      "rating": 4.5,
+      "best_seller": true,
+      "in_stock": true,
+      "size": 16
+    },
+    {
+      "id": "019",
+      "title": "Ruby on Rails Tutorial: Learn Web Development with Rails",
+      "description": "A comprehensive tutorial on building web applications with Ruby on Rails.",
+      "summary": "Ruby on Rails Tutorial provides a comprehensive tutorial on building web applications with Ruby on Rails. With its clear explanations and practical examples, it's perfect for beginners and intermediate developers.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/ruby_on_rails_tutorial.webp",
+      "price": 39.99,
+      "rating": 4.5,
+      "best_seller": true,
+      "in_stock": true,
+      "size": 15
+    },
+    {
+      "id": "020",
+      "title": "Learning Java",
+      "description": "An introductory Java book for beginners.",
+      "summary": "Learning Java is a comprehensive guide to learning the Java programming language. With its clear explanations and practical examples, it's perfect for beginners looking to master Java.",
+      "image": "https://raw.githubusercontent.com/kiboma2021/JSON_DATA/main/learning_java.avif",
+      "price": 26.99,
+      "rating": 0,
+      "best_seller": false,
+      "in_stock": true,
+      "size": 10
+    }
+  ],
+  "users": [
+    {
+      "name": "RICHARD MWANGI",
+      "email": "keukuannita@gmail.com",
+      "password": "eeeeeeeeeee",
+      "id": 1
+    },
+    {
+      "name": "RICHARD MWANGI",
+      "email": "keukuannita@gmail.com",
+      "password": "eeeeeeeeeee",
+      "id": 2
+    },
+    {
+      "name": "RICHARD MWANGI",
+      "email": "keukuannita@gmail.com",
+      "password": "eeeeeeeeeee",
+      "id": 3
+    },
+    {
+      "name": "RICHARD MWANGI",
+      "email": "keukuannita@gmail.com",
+      "password": "eeeeeeeeeee",
+      "id": 4
+    }
+  ]
+}

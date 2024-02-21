@@ -19,14 +19,14 @@ export const BookCard = ({ book }) => {
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
 
         <div className="flex justify-center gap-5">
-          <a href="/">
-            <i className="bi bi-facebook">.</i>
+          <a href="/" aria-label="Facebook">
+            <i className="bi bi-facebook" />
           </a>
-          <a href="/">
-            <i className="bi bi-twitter-x">.</i>
+          <a href="/" aria-label="Twitter">
+            <i className="bi bi-twitter-x" />
           </a>
-          <a href="/">
-            <i className="bi bi-instagram">.</i>
+          <a href="/" aria-label="Instagram">
+            <i className="bi bi-instagram" />
           </a>
         </div>
       </div>

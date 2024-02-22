@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const createBooks = createAsyncThunk('books/createBooks', async (data) => {
+const createBooks = createAsyncThunk('books/createBooks', async ({ data, id }) => {
   try {
     const formData = new FormData();
     formData.append('book[title]', data.title);
@@ -11,15 +11,13 @@ const createBooks = createAsyncThunk('books/createBooks', async (data) => {
     formData.append('book[description]', data.description);
     formData.append('book[year]', data.year);
     formData.append('book[rating]', data.rating);
-    formData.append('book[user_id]', data.userId);
+    formData.append('book[user_id]', id);
 
     const response = await axios.post('http://localhost:4000/books', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
     });
-
-    console.log(response)
     return response.data;
   } catch (error) {
     return { error: true, message: error.message };

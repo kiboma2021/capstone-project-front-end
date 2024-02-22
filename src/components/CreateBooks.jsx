@@ -1,5 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
+import { useContext } from 'react';
+import { User } from '../App';
 import createBooks from '../redux/books/actions/createBooks';
 
 export default function CreateBooks() {
@@ -7,10 +9,12 @@ export default function CreateBooks() {
     register, handleSubmit, formState: { errors }, reset,
   } = useForm();
   const dispatch = useDispatch();
+  const { currentUser } = useContext(User);
 
   const onSubmit = (data) => {
     try {
-      dispatch(createBooks(data));
+      const { id } = currentUser;
+      dispatch(createBooks({ data, id }));
       reset();
       return null;
     } catch (error) {
@@ -41,17 +45,6 @@ export default function CreateBooks() {
           })}
         />
         {errors.price && (<p>{errors.price.message}</p>)}
-      </div>
-      <div>
-        <input
-          placeholder="User id"
-          type="number"
-          name="userId"
-          {...register('userId', {
-            required: 'User id is required',
-          })}
-        />
-        {errors.userId && (<p>{errors.userId.message}</p>)}
       </div>
       <div>
         <input

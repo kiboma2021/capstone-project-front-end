@@ -64,7 +64,7 @@ export const FeaturedBooks = ({ data }) => {
         {/* Slider controls */}
         <button
           type="button"
-          className="absolute top-1/2 transform -translate-y-1/2 left-0 z-10 bg-green-600 text-5xl p-3 rounded-r-full"
+          className="absolute top-1/4 transform -translate-y-1/2 left-0 z-10 bg-green-600 text-5xl p-3 rounded-r-full"
           onClick={handlePrevSlide}
           aria-label="Previous"
         >
@@ -72,7 +72,7 @@ export const FeaturedBooks = ({ data }) => {
         </button>
         <button
           type="button"
-          className="absolute top-1/2 transform -translate-y-1/2 right-0 z-10 bg-green-600 text-5xl p-3 rounded-l-full"
+          className="absolute top-1/4 transform -translate-y-1/2 right-0 z-10 bg-green-600 text-5xl p-3 rounded-l-full"
           onClick={handleNextSlide}
           aria-label="Next"
         >

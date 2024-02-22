@@ -44,6 +44,17 @@ export default function CreateBooks() {
       </div>
       <div>
         <input
+          placeholder="User id"
+          type="number"
+          name="userId"
+          {...register('userId', {
+            required: 'User id is required',
+          })}
+        />
+        {errors.userId && (<p>{errors.userId.message}</p>)}
+      </div>
+      <div>
+        <input
           placeholder="Image"
           type="file"
           name="image"

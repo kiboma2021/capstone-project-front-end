@@ -16,7 +16,7 @@ export default function Home() {
       {books.map((book) => (
         <li key={book.id}>
           <div>
-            <img alt="Book cover" src={book.cover} />
+            <img alt="Book cover" src={book.image} />
           </div>
           <div>
             <p>

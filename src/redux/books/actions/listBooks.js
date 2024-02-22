@@ -3,11 +3,9 @@ import axios from 'axios';
 
 const listBooks = createAsyncThunk('books/listBooks', async () => {
   const response = await axios.get('http://localhost:4000/books');
-
   if (!response) {
     return { message: 'There are not books yet' };
   }
-
   return response.data.map((book) => ({
     id: book.id,
     title: book.title,

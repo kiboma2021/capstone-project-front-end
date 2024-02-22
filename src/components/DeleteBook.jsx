@@ -38,7 +38,7 @@ export default function DeleteBook() {
         })
           .map((book) => (
             <li key={book.id}>
-              <img alt="Book cover" src={book.cover} />
+              <img alt="Book cover" src={book.image} />
               <p>
                 Title:
                 {book.title}

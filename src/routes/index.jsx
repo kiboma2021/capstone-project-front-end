@@ -7,6 +7,8 @@ import NavPanel from '../components/NavPanel';
 import CreateBooks from '../components/CreateBooks';
 import DeleteBook from '../components/DeleteBook';
 import Home from '../pages/Home';
+import CreateReservations from '../components/CreateReservations';
+import MyReservations from '../pages/MyReservations';
 
 const Routes = () => {
   const { token } = useAuth();
@@ -45,6 +47,14 @@ const Routes = () => {
         {
           path: '/delete-book',
           element: <DeleteBook />,
+        },
+        {
+          path: '/reserve-book',
+          element: <CreateReservations />,
+        },
+        {
+          path: '/reservations',
+          element: <MyReservations />,
         },
       ],
     },

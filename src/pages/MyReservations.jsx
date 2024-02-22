@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { User } from '../App';
 import listOfReservations from '../redux/reservations/actions/indexReservations';
@@ -8,16 +8,18 @@ const MyReservations = () => {
   const dispatch = useDispatch();
   const reservations = useSelector((state) => state.reservations.list);
   const { currentUser } = useContext(User);
+  const [success, setSuccess] = useState(false);
+
+  const handleDelete = async (reserveId) => {
+    await dispatch(deleteReservations(reserveId));
+    await setSuccess(!success);
+  };
 
   useEffect(() => {
     if (currentUser && currentUser.id) {
       dispatch(listOfReservations(currentUser.id));
     }
-  }, [dispatch, currentUser]);
-
-  const handleDelete = (reserveId) => {
-    dispatch(deleteReservations(reserveId));
-  };
+  }, [dispatch, currentUser, success]);
 
   return (
     <div>

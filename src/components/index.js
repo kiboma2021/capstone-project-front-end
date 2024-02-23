@@ -3,3 +3,4 @@
 
 export { BookCard } from './BookCard';
 export { NavPanel } from './NavPanel';
+export { FeaturedBooks } from './FeaturedBooks';

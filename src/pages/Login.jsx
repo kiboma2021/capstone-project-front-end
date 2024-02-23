@@ -1,28 +1,22 @@
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { useDispatch, useSelector } from 'react-redux';
-import { useContext } from 'react';
+import { useDispatch } from 'react-redux';
 import { useAuth } from '../provider/authProvider';
 import loginUsers from '../redux/users/actions/loginUsers';
-import { User } from '../App';
-import currentUserAPI from '../redux/users/actions/currentUserAPI';
 
 const Login = () => {
   const { setToken } = useAuth();
-  const { setCurrentUser } = useContext(User);
   const navigate = useNavigate();
   const {
     register, handleSubmit, formState: { errors },
   } = useForm();
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.users.currentUser);
 
   const handleLogin = async (data) => {
     await dispatch(loginUsers(data));
-    await dispatch(currentUserAPI());
     setToken(localStorage.getItem('token'));
-    setCurrentUser(user);
     navigate('/');
+    window.location.reload();
   };
 
   return (

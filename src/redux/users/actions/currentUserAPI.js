@@ -10,6 +10,7 @@ const currentUserAPI = createAsyncThunk('users/currentUser', async () => {
       Authorization: token,
     },
   });
+  console.log(response);
   return response.data;
 });
 

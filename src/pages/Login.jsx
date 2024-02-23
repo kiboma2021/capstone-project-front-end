@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
-import { useContext } from 'react'
+import { useContext } from 'react';
 import { useAuth } from '../provider/authProvider';
 import loginUsers from '../redux/users/actions/loginUsers';
 import { User } from '../App';

@@ -9,6 +9,7 @@ import DeleteBook from '../components/DeleteBook';
 import Home from '../pages/Home';
 import CreateReservations from '../components/CreateReservations';
 import MyReservations from '../pages/MyReservations';
+import BookDetail from '../pages/BookDetail';
 
 const Routes = () => {
   const { token } = useAuth();
@@ -55,6 +56,10 @@ const Routes = () => {
         {
           path: '/reservations',
           element: <MyReservations />,
+        },
+        {
+          path: '/details/:id',
+          element: <BookDetail />,
         },
       ],
     },

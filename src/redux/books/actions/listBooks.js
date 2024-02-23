@@ -11,6 +11,10 @@ const listBooks = createAsyncThunk('books/listBooks', async () => {
     title: book.title,
     price: book.price,
     image: book.image_url,
+    description: book.description,
+    rating: book.rating,
+    year: book.year,
+    author: book.author,
   }));
 });
 

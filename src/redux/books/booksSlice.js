@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import createBooks from './actions/createBooks';
 import listBooks from './actions/listBooks';
 import deleteBooks from './actions/deleteBooks';
+import showBook from './actions/showBook';
 
 const initialState = {
   book: null,
@@ -25,6 +26,9 @@ const booksSlice = createSlice({
       })
       .addCase(deleteBooks.fulfilled, (state, action) => {
         state.status = action.payload.message;
+      })
+      .addCase(showBook.fulfilled, (state, action) => {
+        state.book = action.payload;
       });
   },
 });

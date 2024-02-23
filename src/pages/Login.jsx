@@ -16,7 +16,7 @@ const Login = () => {
     await dispatch(loginUsers(data));
     setToken(localStorage.getItem('token'));
     navigate('/', { replace: true });
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit(handleLogin)}>

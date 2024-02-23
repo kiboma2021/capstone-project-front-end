@@ -4,11 +4,13 @@
 import { Link } from 'react-router-dom';
 
 export const BookCard = ({ book }) => {
-  const { title, image, description } = book;
+  const {
+    id, title, image, description,
+  } = book;
 
   return (
     <div className=" max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <Link to="/">
+      <Link to={`/book/${id}`}>
         <img className="rounded-2xl" src={image} alt="" />
       </Link>
       <div className="flex flex-col text-center p-5 gap-2">

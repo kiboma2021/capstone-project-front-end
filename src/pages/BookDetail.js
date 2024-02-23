@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export const BookDetail = () => {
   const [book, setBook] = useState({});
@@ -66,10 +66,10 @@ export const BookDetail = () => {
           <span className="font-bold">5.9% APR </span>
           Representative
         </p>
-        <p className="flex justify-end font-bold mb-3">
+        <Link to="/books" className="flex justify-end font-bold mb-3">
           DISCOVER MORE BOOKS
           <i className="bi bi-fast-forward-circle" />
-        </p>
+        </Link>
         <div className="flex justify-between text-white font-bold p-5 m-5 rounded-full bg-green-600 hover:bg-green-800">
           <i className="bi bi-gear" />
           <p>Reserve Book</p>

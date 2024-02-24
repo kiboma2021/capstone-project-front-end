@@ -66,32 +66,51 @@ export default function Home() {
               <div className="carousel-and-buttons">
                 <button type="button" onClick={sliderRef?.slickPrev} className="carousel-btn left">{'<'}</button>
                 <div className="carousel-inner">
-                  <Slider {...settings} ref={setSliderRef}>
-                    {books.map((book) => (
-                      <li className="carousel-content" key={book.id}>
-                        <button type="button" onClick={() => goToDetails(book.id)} className="img-carousel">
-                          <img alt="Book cover" src={book.image} className="image" />
+                  {books.length === 1
+                    ? (
+                      <li className="carousel-content" key={books[0].id}>
+                        <button type="button" onClick={() => goToDetails(books[0].id)} className="img-carousel">
+                          <img alt="Book cover" src={books[0].image} className="image" />
                         </button>
                         <div className="carousel-text">
                           <p>
                             Title:
-                            {book.title}
+                            {books[0].title}
                           </p>
                           <p>
                             Price:
-                            {book.price}
+                            {books[0].price}
                           </p>
                         </div>
                       </li>
-                    ))}
-
-                  </Slider>
+                    )
+                    : (
+                      <Slider {...settings} ref={setSliderRef}>
+                        {books.map((book) => (
+                          <li className="carousel-content" key={book.id}>
+                            <button type="button" onClick={() => goToDetails(book.id)} className="img-carousel">
+                              <img alt="Book cover" src={book.image} className="image" />
+                            </button>
+                            <div className="carousel-text">
+                              <p>
+                                Title:
+                                {book.title}
+                              </p>
+                              <p>
+                                Price:
+                                {book.price}
+                              </p>
+                            </div>
+                          </li>
+                        ))}
+                      </Slider>
+                    )}
                 </div>
                 <button type="button" onClick={sliderRef?.slickNext} className="carousel-btn right">{'>'}</button>
               </div>
             </>
           )
-          : <div>There are not books yet</div>}
+          : <div className="no-books"><div>There are not books yet</div></div>}
       </ul>
     </div>
   );

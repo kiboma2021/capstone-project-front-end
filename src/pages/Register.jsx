@@ -21,61 +21,63 @@ export default function SignupForm() {
   const password = watch('password');
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <input
-          placeholder="Name"
-          type="text"
-          name="name"
-          {...register('name', {
-            required: 'Name is required',
-            maxLength: { value: 80, message: 'Name must be 80 or less characters long' },
-          })}
-        />
-        {errors.name && (<p>{errors.name.message}</p>)}
-      </div>
-      <div>
-        <input
-          placeholder="Email"
-          type="text"
-          name="email"
-          {...register('email', {
-            required: 'Email is required',
-            maxLength: { value: 80, message: 'Email must be 80 or less characters long' },
-          })}
-        />
-        {errors.email && (<p>{errors.email.message}</p>)}
-      </div>
-      <div>
-        <input
-          placeholder="Password"
-          type="password"
-          name="password"
-          {...register('password', {
-            required: 'Password is required',
-            maxLength: { value: 80, message: 'Password must be 80 or less characters long' },
-          })}
-        />
-        {errors.password && (<p>{errors.password.message}</p>)}
-      </div>
-      <div>
-        <input
-          placeholder="Password"
-          type="password"
-          name="passwordConfirmation"
-          {...register('passwordConfirmation', {
-            required: 'Password confirmation is required',
-            validate: (value) => value === password || 'Password confirmation and password do not match',
-          })}
-        />
-        {errors.passwordConfirmation && (<p>{errors.passwordConfirmation.message}</p>)}
-      </div>
-      <div>
-        <button type="submit">Signup</button>
-      </div>
-      <div>
-        <button onClick={() => navigate('/login')} type="button">Login here</button>
-      </div>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <input
+            placeholder="Name"
+            type="text"
+            name="name"
+            {...register('name', {
+              required: 'Name is required',
+              maxLength: { value: 80, message: 'Name must be 80 or less characters long' },
+            })}
+          />
+          {errors.name && (<p>{errors.name.message}</p>)}
+        </div>
+        <div>
+          <input
+            placeholder="Email"
+            type="text"
+            name="email"
+            {...register('email', {
+              required: 'Email is required',
+              maxLength: { value: 80, message: 'Email must be 80 or less characters long' },
+            })}
+          />
+          {errors.email && (<p>{errors.email.message}</p>)}
+        </div>
+        <div>
+          <input
+            placeholder="Password"
+            type="password"
+            name="password"
+            {...register('password', {
+              required: 'Password is required',
+              maxLength: { value: 80, message: 'Password must be 80 or less characters long' },
+            })}
+          />
+          {errors.password && (<p>{errors.password.message}</p>)}
+        </div>
+        <div>
+          <input
+            placeholder="Password"
+            type="password"
+            name="passwordConfirmation"
+            {...register('passwordConfirmation', {
+              required: 'Password confirmation is required',
+              validate: (value) => value === password || 'Password confirmation and password do not match',
+            })}
+          />
+          {errors.passwordConfirmation && (<p>{errors.passwordConfirmation.message}</p>)}
+        </div>
+        <div>
+          <button type="submit">Signup</button>
+        </div>
+        <div>
+          <button onClick={() => navigate('/login')} type="button">Login here</button>
+        </div>
+      </form>
+    </div>
   );
 }

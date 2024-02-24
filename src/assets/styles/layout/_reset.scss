@@ -6,13 +6,16 @@
   list-style: none;
   text-rendering: optimizeLegibility;
   text-size-adjust: none;
-  color: black;
+  color: $primary-font;
+  & > * {
+    color: $primary-font;
+  }
   box-sizing: border-box;
   border-radius: 0;
   background-color: transparent;
   font-family: 'Main', sans-serif;
-  font-size: medium;
-  font-weight: 300;
+  font-size: small;
+  font-weight: 100;
   outline: 1px solid red;
 
   input::-webkit-outer-spin-button,

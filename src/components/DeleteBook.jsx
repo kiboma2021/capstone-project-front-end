@@ -22,7 +22,8 @@ export default function DeleteBook() {
   };
 
   return (
-    <div>
+    <div className="content">
+      <h1>REMOVE A BOOK</h1>
       <div>
         <input
           placeholder="Title"
@@ -47,8 +48,8 @@ export default function DeleteBook() {
                 Price:
                 {book.price}
               </p>
-              <button type="button" onClick={() => deleteBook(book.id)}>
-                <img alt="Delete icon" src="" />
+              <button className="btn" type="button" onClick={() => deleteBook(book.id)}>
+                DELETE
               </button>
             </li>
           ))}

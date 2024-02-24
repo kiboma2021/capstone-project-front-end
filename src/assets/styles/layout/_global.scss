@@ -1,12 +1,54 @@
 img {
-  width: 400px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
+}
+
+main {
+  min-height: 0px;
+  min-width: 0px;
+  @extend %flex-parent;
+  flex-direction: row;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 13%;
+  position: fixed;
+  box-shadow: 3px 0px 20px 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  background-color: white;
+  align-items: flex-start;
+  justify-content: center;
+  @include small-down {
+    width: 20%;
+  }
+
+  @include extra-small-down {
+    width: 25%;
+  }
+}
+
+.content {
+  width: 87%;
+  left: 6.5%;
+  position: relative;
+  height: 100%;
+  padding-top: 100px;
+  @include small-down {
+    width: 100%;
+    position: static;
+  }
 }
 
 .public {
   height: 100vh;
   @extend %flex-parent;
   background-color: $second-background;
+  width: 100%;
 }
 
 .icon-page {
@@ -24,8 +66,74 @@ img {
 form {
   z-index: 100;
   @extend %flex-parent;
+  & > * {
+    margin: 5px;
+  }
 }
 
 input {
   background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2px;
+  color: black;
+}
+
+.btn {
+  padding: 13px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: $primary-btn;
+  color: white;
+  transition: all 0.2s;
+  &:hover {
+    scale: 1.1;
+    background-color: white;
+    color: $primary-btn;
+  }
+  &:active {
+    transform: scale(0.9);
+    background-color: $primary-btn;
+    color: white;
+  }
+}
+
+.link {
+  color: white;
+  transition: all 0.4s;
+  &:hover {
+    color: blue;
+  }
+  &:active {
+    color: red;
+  }
+}
+
+h1 {
+  color: black;
+  font-size: x-large;
+}
+
+.public-title {
+  color: white;
+}
+
+.carousel {
+  display: block;
+  height: 100%;
+}
+
+.logo {
+  width: 7vw;
+  height: 7vw;
+  margin: -90px 0px 75px 20%;
+   @include small-down {
+    width: 60%;
+    height: 12%;
+   }
+
+   @include extra-small-down {
+    height: 10%;
+    width: 65%;
+   }
 }

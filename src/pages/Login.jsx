@@ -26,7 +26,7 @@ const Login = () => {
       <img src={bg} alt="background" className="image-bg" />
       <form onSubmit={handleSubmit(handleLogin)}>
         <img alt="Page icon" src={logo} className="icon-page" />
-        <h1>LOGIN</h1>
+        <h1 className="public-title">LOGIN</h1>
         <div>
           <input
             placeholder="Name"
@@ -64,10 +64,10 @@ const Login = () => {
           {errors.password && (<p>{errors.password.message}</p>)}
         </div>
         <div>
-          <button type="submit">Login</button>
+          <button type="submit" className="btn">Login</button>
         </div>
         <div>
-          <button onClick={() => navigate('/')} type="button">Sign up here</button>
+          <button onClick={() => navigate('/')} type="button" className="link">Sign up here</button>
         </div>
       </form>
     </div>

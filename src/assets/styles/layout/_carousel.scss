@@ -1,0 +1,61 @@
+.carousel-and-buttons {
+  display: flex;
+  margin-top: 130px;
+  align-items: center;
+}
+
+.carousel-inner {
+  width: 89%;
+  @include small-down {
+    width: 85%;
+  }
+
+  @include extra-small-down {
+    width: 75%;
+  }
+}
+
+.carousel-btn {
+  width: 5.5%;
+  background-color: $primary-btn;
+  height: 50px;
+  @include small-down {
+    width: 7.5%;
+  }
+  @include extra-small-down {
+    width: 12.5%;
+  }
+}
+
+.img-carousel {
+  display: contents;
+  cursor: pointer;
+}
+
+.image {
+  border-radius: 165px;
+}
+
+.titles,
+.carousel-content {
+  @extend %flex-parent;
+  display: flex !important;
+}
+
+.carousel-text {
+  margin-top: 40px;
+  &>* {
+    text-align: center;
+  }
+}
+
+.left {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.right {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+

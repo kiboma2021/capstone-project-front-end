@@ -19,12 +19,12 @@ export default function BookDetail() {
   if (!book) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="content">
       <img alt="Book cover" src={book.image_url} />
       <p>{book.id}</p>
       <p>{book.title}</p>
       <p>{book.price}</p>
-      <button type="button" onClick={goToReservations}>RESERVE</button>
+      <button className="btn" type="button" onClick={goToReservations}>RESERVE</button>
     </div>
   );
 }

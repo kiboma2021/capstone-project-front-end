@@ -27,7 +27,7 @@ export default function SignupForm() {
       <img src={bg} alt="background" className="image-bg" />
       <form onSubmit={handleSubmit(onSubmit)}>
         <img alt="Page icon" src={logo} className="icon-page" />
-        <h1>SINGUP</h1>
+        <h1 className="public-title">SIGNUP</h1>
         <div>
           <input
             placeholder="Name"
@@ -77,10 +77,10 @@ export default function SignupForm() {
           {errors.passwordConfirmation && (<p>{errors.passwordConfirmation.message}</p>)}
         </div>
         <div>
-          <button type="submit">Signup</button>
+          <button type="submit" className="btn">Signup</button>
         </div>
         <div>
-          <button onClick={() => navigate('/login')} type="button">Login here</button>
+          <button onClick={() => navigate('/login')} type="button" className="link">Login here</button>
         </div>
       </form>
     </div>

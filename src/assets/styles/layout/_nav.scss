@@ -1,0 +1,66 @@
+.navigator {
+  display: none;
+}
+
+.visible {
+  display: flex;
+  background-color: white;
+  z-index: 300;
+}
+
+.burger {
+  display: block;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  z-index: 500;
+  margin: 10px;
+}
+
+.invisible {
+  display: none;
+}
+
+.navigator__overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: gray;
+  opacity: 60%;
+}
+
+.burger-container {
+  align-self: flex-start;
+}
+
+@keyframes move-to-the-side {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(15px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.link-nav {
+  padding: 15px;
+  padding-left: 10%;
+  margin-left: 10%;
+  width: 90%;
+  text-align: left;
+  color: black;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary-btn;
+    color: white;
+  }
+  &:focus {
+    animation: move-to-the-side 0.5s;
+  }
+}

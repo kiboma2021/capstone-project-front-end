@@ -22,7 +22,7 @@ const MyReservations = () => {
   }, [dispatch, currentUser, success]);
 
   return (
-    <div>
+    <div className="content">
       <ul>
         {reservations.length > 0
           ? reservations.map((reservation) => (

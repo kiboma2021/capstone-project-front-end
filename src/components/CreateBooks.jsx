@@ -23,8 +23,9 @@ export default function CreateBooks() {
   };
 
   return (
-    <div>
+    <div className="content">
       <form onSubmit={handleSubmit(onSubmit)}>
+        <h1>ADD A NEW BOOK</h1>
         <div>
           <input
             placeholder="Title"
@@ -103,7 +104,7 @@ export default function CreateBooks() {
           {errors.rating && (<p>{errors.rating.message}</p>)}
         </div>
         <div>
-          <button type="submit">Create book</button>
+          <button className="btn" type="submit">Create book</button>
         </div>
       </form>
     </div>

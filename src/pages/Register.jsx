@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useAuth } from '../provider/authProvider';
 import createUsers from '../redux/users/actions/createUsers';
+import bg from '../assets/background.jpg';
+import logo from '../assets/boooks.png';
 
 export default function SignupForm() {
   const { setToken } = useAuth();
@@ -21,8 +23,11 @@ export default function SignupForm() {
   const password = watch('password');
 
   return (
-    <div>
+    <div className="public">
+      <img src={bg} alt="background" className="image-bg" />
       <form onSubmit={handleSubmit(onSubmit)}>
+        <img alt="Page icon" src={logo} className="icon-page" />
+        <h1>SINGUP</h1>
         <div>
           <input
             placeholder="Name"

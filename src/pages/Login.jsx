@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { useAuth } from '../provider/authProvider';
 import loginUsers from '../redux/users/actions/loginUsers';
+import logo from '../assets/boooks.png';
+import bg from '../assets/background.jpg';
 
 const Login = () => {
   const { setToken } = useAuth();
@@ -20,8 +22,11 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="public">
+      <img src={bg} alt="background" className="image-bg" />
       <form onSubmit={handleSubmit(handleLogin)}>
+        <img alt="Page icon" src={logo} className="icon-page" />
+        <h1>LOGIN</h1>
         <div>
           <input
             placeholder="Name"

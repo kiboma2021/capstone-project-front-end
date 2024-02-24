@@ -13,10 +13,15 @@
   font-family: 'Main', sans-serif;
   font-size: medium;
   font-weight: 300;
+  outline: 1px solid red;
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
+}
+
+html {
+  width: 100%;
 }

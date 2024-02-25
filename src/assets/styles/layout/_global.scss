@@ -176,3 +176,75 @@ h1 {
     @extend %flex-parent;
   }
 }
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include medium-down {
+    flex-direction: column;
+  }
+  &-btn {
+    width: fit-content;
+    align-self: end;
+    margin-top: 10%;
+    @include medium-down {
+      margin-top: 10px;
+    }
+  }
+}
+
+.image-details {
+  width: 50%;
+  height: 80%;
+  margin-right: 2.5%;
+  @include medium-down {
+    width: 40%;
+    height: 45%;
+    margin: 0;
+  }
+  @include small-down {
+    width: 50%
+  }
+  @include extra-small-down {
+    width: 80%
+  }
+}
+
+.details-book {
+  display: flex;
+  flex-direction: column;
+  &>* {
+    display: flex;
+    justify-content: space-between;
+  }
+  &>div {
+    padding: 10px;
+    &:nth-of-type(odd) {
+      background-color: #e2e3e5;
+    }
+    &>div {
+      color: black;
+    }
+  }
+}
+
+.details-container {
+  width: 25%;
+  @include medium-down {
+    width: 40%;
+  }
+  @include small-down {
+    width: 50%
+  }
+  @include extra-small-down {
+    width: 80%
+  }
+  &>h1 {
+    margin-bottom: 10%;
+    text-align: end;
+    @include medium-down {
+      margin: 10px 0;
+    }
+  }
+}

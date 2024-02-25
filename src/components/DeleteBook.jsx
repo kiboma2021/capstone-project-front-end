@@ -22,9 +22,9 @@ export default function DeleteBook() {
   };
 
   return (
-    <div className="content">
-      <h1>REMOVE A BOOK</h1>
+    <div className="content delete-books">
       <div>
+        <h1 className="title-margin">REMOVE A BOOK</h1>
         <input
           placeholder="Title"
           type="text"
@@ -32,7 +32,7 @@ export default function DeleteBook() {
           onChange={updateSearch}
         />
       </div>
-      <ul>
+      <ul className="books-to-delete">
         {books.filter((data) => {
           if (searchInput === '') return true;
           return data.title.includes(searchInput);

@@ -19,7 +19,7 @@ export default function BookDetail() {
   if (!book) return <div>Loading...</div>;
 
   return (
-    <div className="content">
+    <div className="content private">
       <img alt="Book cover" src={book.image_url} />
       <p>{book.id}</p>
       <p>{book.title}</p>

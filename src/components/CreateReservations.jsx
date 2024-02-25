@@ -18,8 +18,7 @@ export default function CreateReservations() {
   };
 
   return (
-    <div className="content">
-      <img alt="Background" />
+    <div className="content private">
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1>RESERVE A BOOK</h1>
         <div>

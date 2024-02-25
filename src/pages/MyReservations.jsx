@@ -59,7 +59,7 @@ const MyReservations = () => {
               </li>
             </div>
           ))
-          : <div>There are not reservations yet</div>}
+          : <div className="no-books">There are not reservations yet</div>}
       </ul>
     </div>
   );

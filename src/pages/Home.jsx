@@ -58,7 +58,7 @@ export default function Home() {
         {books.length > 0
           ? (
             <>
-              <div className="titles">
+              <div className="titles title-margin">
                 <h1>LIST OF BOOKS</h1>
                 <h2>Please select a book</h2>
                 <p>..............................................</p>

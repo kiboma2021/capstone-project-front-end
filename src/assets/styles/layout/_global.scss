@@ -1,6 +1,7 @@
 img {
   width: 300px;
   height: 300px;
+  border-radius: 30px;
 }
 
 main {
@@ -37,7 +38,6 @@ nav {
   left: 6.5%;
   position: relative;
   height: 100%;
-  padding-top: 100px;
   @include small-down {
     width: 100%;
     position: static;
@@ -73,10 +73,15 @@ form {
 
 input {
   background: transparent;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 2px;
   color: black;
+}
+
+textarea {
+  @extend input;
+  resize: none;
 }
 
 .btn {
@@ -112,6 +117,16 @@ input {
 h1 {
   color: black;
   font-size: x-large;
+  margin-bottom: 20px;
+}
+
+.private {
+  @extend %flex-parent;
+}
+
+.delete-books {
+  @extend %flex-parent;
+  justify-content: flex-start;
 }
 
 .public-title {
@@ -126,13 +141,38 @@ h1 {
 .logo {
   width: 7vw;
   height: 7vw;
-  margin: -90px 0px 75px 30%;
+  margin: -90px 0px 75px 20%;
    @include small-down {
-    width: 40%;
+    width: 100px;
     height: 12%;
+    margin-left: 30%;
    }
 
    @include extra-small-down {
     height: 10%;
    }
+}
+
+.title-margin {
+  margin-top: 100px;
+}
+
+.books-to-delete {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row dense;
+
+  @include medium-down {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  @include extra-small-down {
+    display: block;
+  }
+  & > li {
+    margin: 10px;
+    @extend %flex-parent;
+  }
 }

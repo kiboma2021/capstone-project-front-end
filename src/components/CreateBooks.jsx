@@ -23,7 +23,7 @@ export default function CreateBooks() {
   };
 
   return (
-    <div className="content">
+    <div className="content private">
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1>ADD A NEW BOOK</h1>
         <div>

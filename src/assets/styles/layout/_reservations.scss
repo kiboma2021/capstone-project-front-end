@@ -15,56 +15,73 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-flow: row dense;
+
   @include extra-small-down {
     margin: 0;
   }
-  &>li>img {
+
+  & > li > img {
     border-radius: 0;
   }
-  &>li:nth-child(even) {
-    flex-direction: row-reverse;
-    &>.arrow {
-      @extend %arrows-right;
-    }
-  }
-  &>li:nth-child(odd) {
-    &>.arrow {
-      @extend %arrows-left;
-    }
-  }
-  &>li {
+
+  & > li {
     background-color: pink;
-    &>.arrow {
+
+    & > .arrow {
       color: pink;
     }
   }
-  &>li:nth-child(2n) {
+
+  & > li:nth-child(even) {
+    flex-direction: row-reverse;
+
+    & > .arrow {
+      @extend %arrows-right;
+    }
+  }
+
+  & > li:nth-child(odd) {
+    & > .arrow {
+      @extend %arrows-left;
+    }
+  }
+
+  & > li:nth-child(2n) {
     background-color: orange;
-    &>.arrow {
+
+    & > .arrow {
       color: orange;
     }
   }
-  &>li:nth-child(3n) {
+
+  & > li:nth-child(3n) {
     background-color: red;
-    &>.arrow {
+
+    & > .arrow {
       color: red;
     }
   }
-  &>li:nth-child(4n) {
+
+  & > li:nth-child(4n) {
     background-color: green;
-    &>.arrow {
+
+    & > .arrow {
       color: green;
     }
   }
-  &>li:nth-child(5n) {
+
+  & > li:nth-child(5n) {
     background-color: brown;
-    &>.arrow {
+
+    & > .arrow {
       color: brown;
     }
   }
-  &>li:nth-child(6n) {
+
+  & > li:nth-child(6n) {
     background-color: seagreen;
-    &>.arrow {
+
+    & > .arrow {
       color: seagreen;
     }
   }
@@ -79,6 +96,7 @@
 .reservation-img {
   width: 50%;
   height: 30vw;
+
   @include extra-small-down {
     height: 50vw;
   }
@@ -86,5 +104,6 @@
 
 .reservation-info {
   @extend %flex-parent;
+
   width: 50%;
 }

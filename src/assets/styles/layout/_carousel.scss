@@ -6,6 +6,7 @@
 
 .carousel-inner {
   width: 89%;
+
   @include small-down {
     width: 85%;
   }
@@ -19,9 +20,11 @@
   width: 5.5%;
   background-color: $primary-btn;
   height: 50px;
+
   @include small-down {
     width: 7.5%;
   }
+
   @include extra-small-down {
     width: 12.5%;
   }
@@ -39,12 +42,14 @@
 .titles,
 .carousel-content {
   @extend %flex-parent;
+
   display: flex !important;
 }
 
 .carousel-text {
   margin-top: 40px;
-  &>* {
+
+  & > * {
     text-align: center;
   }
 }
@@ -64,5 +69,5 @@
   top: 50%;
   position: absolute;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }

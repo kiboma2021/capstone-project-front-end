@@ -57,10 +57,12 @@
   text-align: left;
   color: black;
   cursor: pointer;
+
   &:hover {
     background-color: $primary-btn;
     color: white;
   }
+
   &:focus {
     animation: move-to-the-side 0.5s;
   }

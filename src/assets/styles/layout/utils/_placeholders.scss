@@ -4,3 +4,19 @@
   flex-direction: column;
   justify-content: center;
 }
+
+%arrows-left {
+  border-right: 15px solid;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  position: absolute;
+  margin-right: 0.8%;
+}
+
+%arrows-right {
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid;
+  position: absolute;
+  margin-left: 0.8%;
+}

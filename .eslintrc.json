@@ -19,8 +19,9 @@
       "react/react-in-jsx-scope": "off",
       "import/no-unresolved": "off",
       "no-shadow": "off",
-      "import/no-cycle": "off",
-      "react/prop-types": "off"
+      "import/no-extraneous-dependencies": "off",
+      "react/jsx-props-no-spreading": "off",
+      "import/no-cycle": "off"
     },
     "overrides": [
       {

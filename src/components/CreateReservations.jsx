@@ -18,8 +18,7 @@ export default function CreateReservations() {
   };
 
   return (
-    <div>
-      <img alt="Background" />
+    <div className="content private">
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1>RESERVE A BOOK</h1>
         <div>
@@ -40,7 +39,7 @@ export default function CreateReservations() {
           {errors.bookId && (<p>{errors.bookId.message}</p>)}
         </div>
 
-        <button type="submit">Reserve book</button>
+        <button className="btn" type="submit">Reserve book</button>
       </form>
     </div>
   );

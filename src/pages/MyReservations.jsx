@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { User } from '../App';
 import listOfReservations from '../redux/reservations/actions/indexReservations';
 import deleteReservations from '../redux/reservations/actions/deleteReservations';
+import trash from '../assets/trash-can.png';
 
 const MyReservations = () => {
   const dispatch = useDispatch();
@@ -22,13 +23,14 @@ const MyReservations = () => {
   }, [dispatch, currentUser, success]);
 
   return (
-    <div>
-      <ul>
+    <div className="content">
+      <ul className="reservations">
         {reservations.length > 0
           ? reservations.map((reservation) => (
-            <div key={reservation.key}>
-              <img alt="Book profile" src={reservation.image} />
-              <li>
+            <li className="container-reservation" key={reservation.key}>
+              <img className="reservation-img" alt="Book profile" src={reservation.image} />
+              <div className="arrow" />
+              <div className="reservation-info">
                 <p>
                   Book id:
                   {' '}
@@ -54,12 +56,12 @@ const MyReservations = () => {
                   role="button"
                   tabIndex={0}
                 >
-                  <img alt="trash icon" src="" />
+                  <img alt="trash icon" src={trash} className="trash" />
                 </div>
-              </li>
-            </div>
+              </div>
+            </li>
           ))
-          : <div>There are not reservations yet</div>}
+          : <div className="no-books">There are not reservations yet</div>}
       </ul>
     </div>
   );

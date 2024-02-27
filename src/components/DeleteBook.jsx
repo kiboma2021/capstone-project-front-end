@@ -22,8 +22,9 @@ export default function DeleteBook() {
   };
 
   return (
-    <div>
+    <div className="content delete-books">
       <div>
+        <h1 className="title-margin">REMOVE A BOOK</h1>
         <input
           placeholder="Title"
           type="text"
@@ -31,7 +32,7 @@ export default function DeleteBook() {
           onChange={updateSearch}
         />
       </div>
-      <ul>
+      <ul className="books-to-delete">
         {books.filter((data) => {
           if (searchInput === '') return true;
           return data.title.includes(searchInput);
@@ -47,8 +48,8 @@ export default function DeleteBook() {
                 Price:
                 {book.price}
               </p>
-              <button type="button" onClick={() => deleteBook(book.id)}>
-                <img alt="Delete icon" src="" />
+              <button className="btn" type="button" onClick={() => deleteBook(book.id)}>
+                DELETE
               </button>
             </li>
           ))}

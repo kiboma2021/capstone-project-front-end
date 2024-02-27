@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   useState, createContext, useMemo, useEffect,
 } from 'react';
-import './App.css';
 import AuthProvider from './provider/authProvider';
 import Routes from './routes';
 import currentUserAPI from './redux/users/actions/currentUserAPI';

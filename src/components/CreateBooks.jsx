@@ -39,12 +39,12 @@ export default function CreateBooks() {
         </div>
         <div>
           <input
-            placeholder="Price"
-            type="number"
-            name="price"
+            placeholder='Price'
+            type='number'
+            name='price'
             {...register('price', {
               required: 'Price is required',
-              min: { value: 0, message: "Price must be greater than or equal 0."}
+              min: { value: 0, message: 'Price must be greater than or equal 0.' },
             })}
           />
           {errors.price && (<p>{errors.price.message}</p>)}
@@ -78,7 +78,7 @@ export default function CreateBooks() {
             name="description"
             {...register('description', {
               required: 'Description is required',
-              maxLength: { value: 70, message: 'Description must be no more than 70 characters long.'}
+              maxLength: { value: 70, message: 'Description must be no more than 70 characters long.' },
             })}
           />
           {errors.description && (<p>{errors.description.message}</p>)}
@@ -90,7 +90,7 @@ export default function CreateBooks() {
             name="year"
             {...register('year', {
               required: 'Year is required',
-              min: { value: 1000, message: 'Year must be no less than 1000.'}
+              min: { value: 1000, message: 'Year must be no less than 1000.' },
             })}
           />
           {errors.year && (<p>{errors.year.message}</p>)}
@@ -102,8 +102,8 @@ export default function CreateBooks() {
             name="rating"
             {...register('rating', {
               required: 'Rating is required',
-              min: { value: 0, message: 'Rating must be no less than 0'},
-              max: { value: 5, message: 'Rating must be no more than 5'}
+              min: { value: 0, message: 'Rating must be no less than 0' },
+              max: { value: 5, message: 'Rating must be no more than 5' },
             })}
           />
           {errors.rating && (<p>{errors.rating.message}</p>)}

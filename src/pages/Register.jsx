@@ -47,8 +47,8 @@ export default function SignupForm() {
             name="email"
             {...register('email', {
               required: 'Email is required',
-              pattern: { value: /(^[a-z0-9._-]+@\w+\.\w+$)/i, message: 'Must be a valid email'},
-              maxLength: { value: 80, message: "Email length must be up to 80 characters."}          
+              pattern: { value: /(^[a-z0-9._-]+@\w+\.\w+$)/i, message: 'Must be a valid email' },
+              maxLength: { value: 80, message: 'Email length must be up to 80 characters.' },         
             })}
           />
           {errors.email && (<p>{errors.email.message}</p>)}

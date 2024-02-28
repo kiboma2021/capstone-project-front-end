@@ -39,9 +39,9 @@ export default function CreateBooks() {
         </div>
         <div>
           <input
-            placeholder='Price'
-            type='number'
-            name='price'
+            placeholder="Price"
+            type="number"
+            name="price"
             {...register('price', {
               required: 'Price is required',
               min: { value: 0, message: 'Price must be greater than or equal 0.' },

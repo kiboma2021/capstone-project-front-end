@@ -59,7 +59,7 @@ export default function Home() {
           ? (
             <>
               <div className="titles title-margin">
-                <h1>LIST OF BOOKS</h1>
+                <h1 data-testid="homeTitle">LIST OF BOOKS</h1>
                 <h2>Please select a book</h2>
                 <p>..............................................</p>
               </div>

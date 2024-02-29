@@ -1,23 +1,28 @@
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { useAuth } from '../provider/authProvider';
 import createUsers from '../redux/users/actions/createUsers';
 import bg from '../assets/background.jpg';
 import logo from '../assets/boooks.png';
 
 export default function SignupForm() {
-  const { setToken } = useAuth();
   const navigate = useNavigate();
+  const [isSuccess, setIsSuccess] = useState(false);
   const {
-    register, handleSubmit, watch, formState: { errors },
+    register, handleSubmit, reset, watch, formState: { errors },
   } = useForm();
   const dispatch = useDispatch();
 
   const onSubmit = async (data) => {
     await dispatch(createUsers(data));
-    setToken(localStorage.getItem('token'));
-    navigate('/', { replace: true });
+    setIsSuccess(true);
+
+    setTimeout(() => {
+      setIsSuccess(false);
+    }, 3000);
+
+    reset();
   };
 
   const password = watch('password');
@@ -79,6 +84,9 @@ export default function SignupForm() {
         </div>
         <div>
           <button type="submit" className="btn">Signup</button>
+        </div>
+        <div>
+          {isSuccess && (<div className="success">Account created successfully</div>)}
         </div>
         <div>
           <button onClick={() => navigate('/login')} type="button" className="link">Login here</button>

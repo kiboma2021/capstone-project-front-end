@@ -13,7 +13,6 @@ const createUsers = createAsyncThunk('users/createUsers', async (data) => {
     };
 
     const response = await axios.post('http://localhost:4000/signup', body);
-    localStorage.setItem('token', response.headers.authorization);
     return response.data;
   } catch (error) {
     return { messsage: error };

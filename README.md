@@ -43,7 +43,7 @@
 
 [Initial state](https://github.com/kiboma2021/capstone-project-front-end/issues/17)
 
-This project was completed by three Team members:
+This project was completed by four Team members:
 
 - Kevin Cruz || @EvansSnave
 - Zabi Noori || @ZabihullahNooriWardak
